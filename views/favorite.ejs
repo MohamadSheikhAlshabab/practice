@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+
+    </header>
+<main>
+<%resultKey.forEach((datas)=>{%>
+    <section>
+        <form action="/add" method="POST">
+            <input type="hidden" name="img" value="<%=datas.img%>">
+            <img src="<%=datas.img%>" >
+            <input type="hidden" name="name" value="<%=datas.name%>">
+            <p><%=datas.name%></p>
+            <input type="hidden" name="level" value="<%=datas.level%>">
+            <p><%=datas.level%></p>
+
+        </form>
+    </section>
+    <%})%>
+</main>
+<footer>
+
+</footer>
+
+
+</body>
+</html>
